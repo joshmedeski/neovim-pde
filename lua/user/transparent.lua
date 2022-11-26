@@ -8,3 +8,5 @@ require("transparent").setup({
     "BufferLineIndicatorSelected",
   },
 })
+
+vim.cmd[[autocmd FileType mason setlocal winblend=10]]

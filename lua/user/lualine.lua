@@ -3,6 +3,9 @@ if not status_ok then
   return
 end
 
+local theme = require('lualine.themes.catppuccin')
+theme.normal.c.bg = nil
+
 local hide_in_width = function()
   return vim.fn.winwidth(0) > 80
 end
@@ -10,18 +13,19 @@ end
 local diagnostics = {
   "diagnostics",
   sources = { "nvim_diagnostic" },
-  sections = { "error", "warn" },
-  symbols = { error = " ", warn = " " },
+  sections = { 'error', 'warn', 'info', 'hint' },
+  symbols = { error = " ", warn = " ", info = " " },
   colored = true,
+  update_in_insert = false,
   always_visible = false,
 }
 
 local diff = {
   "diff",
-  symbols = { added = " ", modified = " ", removed = " " },
   colored = true,
-  always_visible = true,
-  cond = hide_in_width,
+  symbols = { added = " ", modified = " ", removed = " " },
+  always_visible = false,
+  cond = hide_in_width
 }
 
 local filetype = {
@@ -38,14 +42,16 @@ local spaces = function()
   return "spaces: " .. vim.api.nvim_buf_get_option(0, "shiftwidth")
 end
 
+local mode = { "mode", colored = false }
+
 lualine.setup {
   options = {
     globalstatus = true,
     icons_enabled = true,
-    theme = "auto",
+    theme = theme,
     component_separators = { left = "", right = "" },
     section_separators = { left = "", right = "" },
-    disabled_filetypes = { "alpha", "dashboard" },
+    disabled_filetypes = { "alpha", "dashboard", "NvimTree", "Outline" },
     always_divide_middle = true,
   },
   sections = {

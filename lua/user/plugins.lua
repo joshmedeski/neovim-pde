@@ -43,16 +43,25 @@ packer.init {
 
 -- https://github.com/wbthomason/packer.nvim
 return packer.startup(function(use)
-  -- My plugins here
-  use { 'xiyaowong/nvim-transparent' } -- https://github.com/xiyaowong/nvim-transparent
+  -- packer manages itself
   use { "wbthomason/packer.nvim", commit = "6afb67460283f0e990d35d229fd38fdc04063e0a" } -- Have packer manage itself
+
+  use { 'xiyaowong/nvim-transparent' } -- https://github.com/xiyaowong/nvim-transparent
+  use { "folke/which-key.nvim" } -- https://github.com/folke/which-key.nvim
+  use { "catppuccin/nvim", as = "catppuccin" } -- https://github.com/catppuccin/nvim
+  use { "folke/trouble.nvim", requires = "kyazdani42/nvim-web-devicons" } -- https://github.com/folke/trouble.nvim
+  use { "lmburns/lf.nvim" }
+  use {"ActivityWatch/aw-watcher-vim"}
+
+  -- TODO: add colorbuddy (integrate with aw)
+  -- https://github.com/tjdevries/colorbuddy.nvim
+
   use { "nvim-lua/plenary.nvim", commit = "4b7e52044bbb84242158d977a50c4cbcd85070c7" } -- Useful lua functions used by lots of plugins
   use { "windwp/nvim-autopairs", commit = "4fc96c8f3df89b6d23e5092d31c866c53a346347" } -- Autopairs, integrates with both cmp and treesitter
   use { "numToStr/Comment.nvim", commit = "97a188a98b5a3a6f9b1b850799ac078faa17ab67" }
   use { "JoosepAlviste/nvim-ts-context-commentstring", commit = "32d9627123321db65a4f158b72b757bcaef1a3f4" }
   use { "kyazdani42/nvim-web-devicons", commit = "563f3635c2d8a7be7933b9e547f7c178ba0d4352" }
-  -- https://github.com/nvim-tree/nvim-tree.lua
-  use { "kyazdani42/nvim-tree.lua", commit = "7282f7de8aedf861fe0162a559fc2b214383c51c" }
+  use { "kyazdani42/nvim-tree.lua", commit = "7282f7de8aedf861fe0162a559fc2b214383c51c" } -- https://github.com/nvim-tree/nvim-tree.lua
   use { "akinsho/bufferline.nvim", commit = "83bf4dc7bff642e145c8b4547aa596803a8b4dc4" }
   use { "moll/vim-bbye", commit = "25ef93ac5a87526111f43e5110675032dbcacf56" }
   use { "nvim-lualine/lualine.nvim", commit = "a52f078026b27694d2290e34efa61a6e4a690621" }
