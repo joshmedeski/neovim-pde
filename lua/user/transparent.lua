@@ -5,13 +5,7 @@ end
 
 transparent.setup({
   enable = true,
-  extra_groups = {
-    "BufferLineTabClose",
-    "BufferLineFill",
-    "BufferLineBackground",
-    "BufferLineSeparator",
-    "BufferLineIndicatorSelected",
-  },
+  extra_groups = { },
 })
 
 -- TODO: fix bug and submit PR (support NONE)
