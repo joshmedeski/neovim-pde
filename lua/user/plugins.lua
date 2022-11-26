@@ -59,6 +59,12 @@ return packer.startup(function(use)
   use { "kyazdani42/nvim-web-devicons", commit = "563f3635c2d8a7be7933b9e547f7c178ba0d4352" }
   use { "nvim-lualine/lualine.nvim", commit = "a52f078026b27694d2290e34efa61a6e4a690621" } -- https://github.com/nvim-lualine/lualine.nvim
 
+  -- colors
+  use {
+    "norcalli/nvim-colorizer.lua",
+    config = function() require('colorizer').setup() end
+  }
+
   use { "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim", } -- https://github.com/folke/todo-comments.nvim
   use { "folke/trouble.nvim", requires = "kyazdani42/nvim-web-devicons" } -- https://github.com/folke/trouble.nvim
 
