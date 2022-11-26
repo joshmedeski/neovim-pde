@@ -43,19 +43,23 @@ packer.init {
 
 -- https://github.com/wbthomason/packer.nvim
 return packer.startup(function(use)
-  -- packer manages itself
   use { "wbthomason/packer.nvim", commit = "6afb67460283f0e990d35d229fd38fdc04063e0a" } -- Have packer manage itself
-
-  use { 'xiyaowong/nvim-transparent' } -- https://github.com/xiyaowong/nvim-transparent
-  use { "folke/which-key.nvim" } -- https://github.com/folke/which-key.nvim
-  use { "catppuccin/nvim", as = "catppuccin" } -- https://github.com/catppuccin/nvim
-  use { "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim", } -- https://github.com/folke/todo-comments.nvim
-  use { "folke/trouble.nvim", requires = "kyazdani42/nvim-web-devicons" } -- https://github.com/folke/trouble.nvim
-
-  use { "lmburns/lf.nvim" }
-  use { "ActivityWatch/aw-watcher-vim" } -- https://activitywatch.net/
+  
+  use { "lewis6991/impatient.nvim", commit = "b842e16ecc1a700f62adb9802f8355b99b52a5a6" } -- https://github.com/lewis6991/impatient.nvim
 
   use { "ThePrimeagen/harpoon", requires = "nvim-lua/plenary.nvim", } -- https://github.com/ThePrimeagen/harpoon
+
+
+  -- theme
+  use { 'xiyaowong/nvim-transparent' } -- https://github.com/xiyaowong/nvim-transparent
+  use { "catppuccin/nvim", as = "catppuccin" } -- https://github.com/catppuccin/nvim
+
+  use { "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim", } -- https://github.com/folke/todo-comments.nvim
+  use { "folke/trouble.nvim", requires = "kyazdani42/nvim-web-devicons" } -- https://github.com/folke/trouble.nvim
+  use { "folke/which-key.nvim" } -- https://github.com/folke/which-key.nvim
+
+  use { "lmburns/lf.nvim" }
+
 
   -- TODO: add colorbuddy (integrate with aw)
   -- https://github.com/tjdevries/colorbuddy.nvim
@@ -71,13 +75,8 @@ return packer.startup(function(use)
   use { "nvim-lualine/lualine.nvim", commit = "a52f078026b27694d2290e34efa61a6e4a690621" }
   use { "akinsho/toggleterm.nvim", commit = "2a787c426ef00cb3488c11b14f5dcf892bbd0bda" }
   use { "ahmedkhalf/project.nvim", commit = "628de7e433dd503e782831fe150bb750e56e55d6" }
-  use { "lewis6991/impatient.nvim", commit = "b842e16ecc1a700f62adb9802f8355b99b52a5a6" }
   use { "lukas-reineke/indent-blankline.nvim", commit = "db7cbcb40cc00fc5d6074d7569fb37197705e7f6" }
   use { "goolord/alpha-nvim", commit = "0bb6fc0646bcd1cdb4639737a1cee8d6e08bcc31" }
-
-  -- Colorschemes
-  use { "folke/tokyonight.nvim", commit = "66bfc2e8f754869c7b651f3f47a2ee56ae557764" }
-  use { "lunarvim/darkplus.nvim", commit = "13ef9daad28d3cf6c5e793acfc16ddbf456e1c83" }
 
   -- cmp plugins
   use { "hrsh7th/nvim-cmp", commit = "b0dff0ec4f2748626aae13f011d1a47071fe9abc" } -- The completion plugin
@@ -92,7 +91,6 @@ return packer.startup(function(use)
   use { "rafamadriz/friendly-snippets", commit = "2be79d8a9b03d4175ba6b3d14b082680de1b31b1" } -- a bunch of snippets to use
 
   -- LSP
-  -- use { "williamboman/nvim-lsp-installer", commit = "e9f13d7acaa60aff91c58b923002228668c8c9e6" } -- simple to use language server installer
   use { "neovim/nvim-lspconfig", commit = "f11fdff7e8b5b415e5ef1837bdcdd37ea6764dda" } -- enable LSP
   use { "williamboman/mason.nvim", commit = "c2002d7a6b5a72ba02388548cfaf420b864fbc12"}
   use { "williamboman/mason-lspconfig.nvim", commit = "0eb7cfefbd3a87308c1875c05c3f3abac22d367c" }
@@ -115,6 +113,9 @@ return packer.startup(function(use)
   use { "mfussenegger/nvim-dap", commit = "6b12294a57001d994022df8acbe2ef7327d30587" }
   use { "rcarriga/nvim-dap-ui", commit = "1cd4764221c91686dcf4d6b62d7a7b2d112e0b13" }
   use { "ravenxrz/DAPInstall.nvim", commit = "8798b4c36d33723e7bba6ed6e2c202f84bb300de" }
+
+  -- Activity tracking
+  use { "ActivityWatch/aw-watcher-vim" } -- https://activitywatch.net/
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
