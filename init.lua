@@ -1,12 +1,17 @@
--- TODO: setup transparency
 -- TODO: setup which key
 -- TODO: port all my leader.vim commands (and heck luavim)
 -- TODO: setup hammerspoon workflow
 -- TODO: add todo icons
-require "user.impatient"
+
+-- TODO: Research impatient
+-- https://github.com/lewis6991/impatient.nvim
+require "user.impatient" -- Improve startup time for Neovim
 require "user.options"
 require "user.keymaps"
+
+-- plugins
 require "user.plugins"
+
 require "user.autocommands"
 require "user.colorscheme"
 require "user.cmp"

@@ -7,11 +7,12 @@ local actions = require "telescope.actions"
 
 telescope.setup {
   defaults = {
-
+    file_ignore_patterns = { ".git/", "node_modules" },
+    path_display = { "smart" },
+    prompt_position = "top",
     prompt_prefix = " ",
     selection_caret = " ",
-    path_display = { "smart" },
-    file_ignore_patterns = { ".git/", "node_modules" },
+    sorting_strategy = "ascending",
 
     mappings = {
       i = {
@@ -22,4 +23,42 @@ telescope.setup {
       },
     },
   },
+
+  pickers = {
+    buffers = {
+      layout_config = {
+        preview_width = 0.6,
+        prompt_position = "top",
+        prompt_prefix = " "
+      }
+    },
+    live_grep = {
+      layout_config = {
+        preview_width = 0.6,
+        prompt_position = "top"
+      }
+    },
+    find_files = {
+      layout_config = {
+        prompt_position = "top"
+      }
+    },
+    git_files = {
+      show_untracked = true,
+      layout_config = {
+        prompt_position = "top",
+        preview_width = 0.6,
+      }
+    },
+    commands = {
+      layout_config = {
+        prompt_position = "top"
+      }
+    },
+    git_status = {
+      layout_config = {
+        prompt_position = "top"
+      }
+    }
+  }
 }

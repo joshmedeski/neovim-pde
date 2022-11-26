@@ -1,46 +1,49 @@
-# A Basic Stable IDE config for Neovim
+# Josh's Neovim pde
 
-> Why does this repo exist?
+## What's a pde?
 
-This config attempts to provide a rock solid fully featured starting point for someone new to Neovim, or just tired of maintaining the basic IDE components of their config.
+`pde` stands for **personalized development environment**.
 
-> What makes it "rock solid"?
 
-All of the included plugins are pinned to a version that ensures they are compatible and will not update potentially introducing errors into your config. For every Neovim release I will update this repo along with the community to keep it up to date with the newest versions.
+Check out the talk [PDE: A different take on editing code](https://www.youtube.com/watch?v=QMVIJhC9Veg) by TJ DeVries for an in-depth look at what a `pde` is and it may or may not be a good fit for you.
 
-As I mentioned, this config is meant as a starting point for people new to Neovim who want a familiar IDE experience. The config has a very simple structure that makes it easy to add new plugins.
+## Template
 
-## Install Neovim 0.8
+This is inspired from LunarVim's [nvim-basic-ide](https://github.com/LunarVim/nvim-basic-ide), thanks for the heads start! I found that LunarVim's solution is too opinionated for me, their basic ide template gave me the freedom to change everything as I saw fit, but provided lots of helpful starting points for the things that make a great IDE. Thanks to the LunarVim community for creating the template.
 
-You can install Neovim with your package manager e.g. brew, apt, pacman etc.. but remember that when you update your packages Neovim may be upgraded to a newer version.
+## What's included?
 
-If you would like to make sure Neovim only updates when you want it to than I recommend installing from source:
+This is my opinionated developer environment.
 
-**NOTE** Verify the required [build prerequisites](https://github.com/neovim/neovim/wiki/Building-Neovim#build-prerequisites) for your system.
+### Core Values
 
-```sh
-git clone https://github.com/neovim/neovim.git
-cd neovim
-git checkout release-0.8
-make CMAKE_BUILD_TYPE=Release
-sudo make install
-```
+Here are the main
 
-## Install the config
+- Blazing Fast
+- Simple
+- Pretty
+- Automated
 
-Make sure to remove or move your current `nvim` directory
+### Languages
 
-```sh
-git clone https://github.com/LunarVim/nvim-basic-ide.git ~/.config/nvim
-```
+The main languages I program in.
 
-Run `nvim` and wait for the plugins to be installed
+- TypeScript
+- Lua
+- Go
+- yaml
+- json
 
-**NOTE** First time you will get an error just ignore them and press enter, it will say nvim-ts-context-commentstring is not installed but that is fine just close and reopen nvim and everything should be fine  
+### How I build apps
 
-**NOTE** (You will notice treesitter pulling in a bunch of parsers the next time you open Neovim)
-
-**NOTE** Checkout this file for some predefined keymaps: [keymaps](https://github.com/LunarVim/nvim-basic-ide/blob/master/lua/user/keymaps.lua)
+- React
+  - Remix
+  - TailwindCSS
+  - clsx
+- Node (fnm)
+- Netlify (cli + MSW)
+- GitHub
+- Fly.io
 
 ## Get healthy
 
