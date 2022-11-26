@@ -44,11 +44,11 @@ packer.init {
 -- https://github.com/wbthomason/packer.nvim
 return packer.startup(function(use)
   use { "wbthomason/packer.nvim", commit = "6afb67460283f0e990d35d229fd38fdc04063e0a" } -- Have packer manage itself
-  
+  -- startup
   use { "lewis6991/impatient.nvim", commit = "b842e16ecc1a700f62adb9802f8355b99b52a5a6" } -- https://github.com/lewis6991/impatient.nvim
 
+  -- buffers
   use { "ThePrimeagen/harpoon", requires = "nvim-lua/plenary.nvim", } -- https://github.com/ThePrimeagen/harpoon
-
 
   -- theme
   use { 'xiyaowong/nvim-transparent' } -- https://github.com/xiyaowong/nvim-transparent
@@ -58,8 +58,7 @@ return packer.startup(function(use)
   use { "folke/trouble.nvim", requires = "kyazdani42/nvim-web-devicons" } -- https://github.com/folke/trouble.nvim
   use { "folke/which-key.nvim" } -- https://github.com/folke/which-key.nvim
 
-  use { "lmburns/lf.nvim" }
-
+  use { "ptzz/lf.vim", requires = "voldikss/vim-floaterm" }
 
   -- TODO: add colorbuddy (integrate with aw)
   -- https://github.com/tjdevries/colorbuddy.nvim

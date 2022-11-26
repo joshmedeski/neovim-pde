@@ -33,7 +33,7 @@ wk.register({
     -- }
   },
 
-  f = { "<cmd>lua require('lf').start()<cr>", "Lf"},
+  f = { "<cmd>Lf<cr>", "Lf"},
   ["%"] = { "<cmd>source %<cr>", ":source %"},
   ["/"] = { "<cmd>noh<cr>", "Clear find"},
 
