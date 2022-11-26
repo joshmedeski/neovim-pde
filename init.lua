@@ -7,8 +7,9 @@ require "user.keymaps"
 require "user.plugins"
 
 -- appearance
-require "user.colorscheme"
+require "user.catppuccin"
 require "user.transparent"
+require "user.colorscheme"
 
 -- plugins' configs
 require "user.alpha"
