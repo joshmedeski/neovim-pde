@@ -1,5 +1,3 @@
-vim.o.ls = 0
-vim.o.ch = 0
 vim.opt.backup = false                          -- creates a backup file
 vim.opt.clipboard = "unnamedplus"               -- allows neovim to access the system clipboard
 vim.opt.cmdheight = 1                           -- more space in the neovim command line for displaying messages
@@ -42,3 +40,37 @@ vim.opt.whichwrap:append("<,>,[,],h,l")         -- keys allowed to move to the p
 vim.opt.iskeyword:append("-")                   -- treats words with `-` as single words
 vim.opt.formatoptions:remove({ "c", "r", "o" }) -- This is a sequence of letters which describes how automatic formatting is to be done
 vim.opt.linebreak = true
+
+-- Remap yank & paste
+vim.cmd[[vnoremap <S-c> "+y]]
+vim.cmd[[map <S-p> "+P]]
+
+-- Yank to end of line
+vim.cmd[[nnoremap Y yg_]]
+
+-- Center next search results
+-- cspell:disable
+vim.cmd[[nnoremap n nzzzv]]
+vim.cmd[[nnoremap N Nzzzv]]
+-- cspell:enable
+
+-- Better J cursor position
+vim.cmd[[nnoremap J mzJ`z]]
+
+-- Undo break points
+vim.cmd[[inoremap , ,<c-g>u]]
+vim.cmd[[inoremap { {<c-g>u]]
+vim.cmd[[inoremap } }<c-g>u]]
+vim.cmd[[inoremap [ [<c-g>u]]
+vim.cmd[[inoremap ] ]<c-g>u]]
+vim.cmd[[inoremap ( (<c-g>u]]
+vim.cmd[[inoremap ) )<c-g>u]]
+
+-- Jumplist mutation
+vim.cmd[[nnoremap <expr> k (v:count > 5 ? "m'" . v:count : "") . 'k']]
+vim.cmd[[nnoremap <expr> j (v:count > 5 ? "m'" . v:count : "") . 'j']]
+
+-- Moving text
+vim.cmd[[vnoremap J :m '>+1<CR>gv=gv]]
+vim.cmd[[vnoremap K :m '<-2<CR>gv=gv]]
+
