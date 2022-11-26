@@ -49,9 +49,13 @@ return packer.startup(function(use)
   use { 'xiyaowong/nvim-transparent' } -- https://github.com/xiyaowong/nvim-transparent
   use { "folke/which-key.nvim" } -- https://github.com/folke/which-key.nvim
   use { "catppuccin/nvim", as = "catppuccin" } -- https://github.com/catppuccin/nvim
+  use { "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim", } -- https://github.com/folke/todo-comments.nvim
   use { "folke/trouble.nvim", requires = "kyazdani42/nvim-web-devicons" } -- https://github.com/folke/trouble.nvim
+
   use { "lmburns/lf.nvim" }
-  use {"ActivityWatch/aw-watcher-vim"}
+  use { "ActivityWatch/aw-watcher-vim" } -- https://activitywatch.net/
+
+  use { "ThePrimeagen/harpoon", requires = "nvim-lua/plenary.nvim", } -- https://github.com/ThePrimeagen/harpoon
 
   -- TODO: add colorbuddy (integrate with aw)
   -- https://github.com/tjdevries/colorbuddy.nvim

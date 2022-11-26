@@ -3,9 +3,6 @@ require "user.impatient" -- Improve startup time for Neovim
 require "user.options"
 require "user.keymaps"
 
--- TODO: add todo icons
--- TODO: setup hammerspoon workflow
-
 -- plugins
 require "user.plugins"
 
@@ -31,6 +28,8 @@ require "user.project"
 require "user.telescope"
 require "user.toggleterm"
 require "user.treesitter"
+require "user.trouble"
+require "user.todo-comments"
 
 -- TODO: port all my leader.vim commands (and heck luavim)
 require "user.which-key"
