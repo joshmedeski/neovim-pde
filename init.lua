@@ -11,15 +11,17 @@ require "user.catppuccin"
 require "user.transparent"
 require "user.colorscheme"
 
--- plugins' configs
+-- startup screen
 require "user.alpha"
+
+-- git
+require "user.gitsigns"
+
 require "user.autocommands"
 require "user.autopairs"
-require "user.bufferline"
 require "user.cmp"
 require "user.comment"
 require "user.dap"
-require "user.gitsigns"
 require "user.illuminate"
 require "user.indentline"
 require "user.lsp"
@@ -31,6 +33,8 @@ require "user.toggleterm"
 require "user.treesitter"
 require "user.trouble"
 require "user.todo-comments"
+require "user.copilot"
+
 
 -- TODO: port all my leader.vim commands (and heck luavim)
 require "user.which-key"
