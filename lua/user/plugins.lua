@@ -117,6 +117,7 @@ return packer.startup(function(use)
 
   -- Activity tracking
   use { "ActivityWatch/aw-watcher-vim" } -- https://activitywatch.net/
+  use { "wakatime/vim-wakatime" }
 
   -- comments
   use { "numToStr/Comment.nvim", commit = "97a188a98b5a3a6f9b1b850799ac078faa17ab67" }
