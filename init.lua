@@ -33,8 +33,6 @@ require "user.toggleterm"
 require "user.treesitter"
 require "user.trouble"
 require "user.todo-comments"
-require "user.copilot"
-
 
 -- TODO: port all my leader.vim commands (and heck luavim)
 require "user.which-key"
