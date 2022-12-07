@@ -37,6 +37,15 @@ wk.register({
   ["%"] = { "<cmd>source %<cr>", ":source %"},
   ["/"] = { "<cmd>noh<cr>", "Clear find"},
 
+  g = {
+    name = "git",
+    b = {
+      name = "blame",
+      b = {"<cmd>GitBlameToggle<cr>", "Toggle blame"},
+      o = {"<cmd>GitBlameOpenCommitURL<cr>", "Open Commit URL"},
+    }
+  },
+
 -- nmap <leader><leader> <Plug>(coc-fix-current)
 -- nmap <leader>G :Goyo<cr>
 -- nmap <leader>a <Plug>(coc-codeaction)

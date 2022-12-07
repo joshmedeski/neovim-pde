@@ -106,9 +106,22 @@ return packer.startup(function(use)
     commit = "8e763332b7bf7b3a426fd8707b7f5aa85823a5ac",
   }
 
-  -- Git
+  -- git
   use { "lewis6991/gitsigns.nvim", commit = "f98c85e7c3d65a51f45863a34feb4849c82f240f" }
   use { "rhysd/committia.vim" }
+  use { "sindrets/diffview.nvim", requires = 'nvim-lua/plenary.nvim' } -- https://github.com/sindrets/diffview.nvim
+  use { "f-person/git-blame.nvim"} -- https://github.com/f-person/git-blame.nvim
+  use {
+    'pwntester/octo.nvim',
+    requires = {
+      'nvim-lua/plenary.nvim',
+      'nvim-telescope/telescope.nvim',
+      'kyazdani42/nvim-web-devicons',
+    },
+    config = function ()
+      require"octo".setup()
+    end
+  }
 
   -- DAP
   use { "mfussenegger/nvim-dap", commit = "6b12294a57001d994022df8acbe2ef7327d30587" }

@@ -1,12 +1,12 @@
 local servers = {
-	"sumneko_lua",
+	"bashls",
 	"cssls",
 	"html",
-	"tsserver",
-	"pyright",
-	"bashls",
 	"jsonls",
+	"sumneko_lua",
+	"tsserver",
 	"yamlls",
+  "astro",
 }
 
 local settings = {

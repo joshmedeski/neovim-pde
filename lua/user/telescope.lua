@@ -11,7 +11,7 @@ telescope.setup {
     path_display = { "smart" },
     prompt_position = "top",
     prompt_prefix = " ",
-    selection_caret = " ",
+    selection_caret = " ",
     sorting_strategy = "ascending",
 
     mappings = {
@@ -29,7 +29,6 @@ telescope.setup {
       layout_config = {
         preview_width = 0.6,
         prompt_position = "top",
-        prompt_prefix = " "
       }
     },
     live_grep = {
